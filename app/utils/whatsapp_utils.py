@@ -40,7 +40,7 @@ def send_message(data):
 
     try:
         response = requests.post(
-            url, data=data, headers=headers, timeout=10
+            url, data=data, headers=headers, timeout=5
         )  # 10 seconds timeout as an example
         response.raise_for_status()  # Raises an HTTPError if the HTTP request returned an unsuccessful status code
     except requests.Timeout:
